@@ -14,7 +14,7 @@ public class Player_Controller : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
 	}
-	
+	//dumb comment
 	// Update is called once per frame
 	void Update () {
         if (isP1) { //sets horizontal and vertical comonents for P1 control
