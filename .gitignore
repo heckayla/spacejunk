@@ -39,6 +39,7 @@ spacejunk/Library/metadata/00/0000000000000000b000000000000000
 *.log
 *.stamp
 spacejunk/Library/assetDatabase3
+<<<<<<< HEAD
 *.dwlt
 spacejunk/Library/InspectorExpandedItems.asset
 *.mdb
@@ -53,3 +54,5 @@ spacejunk/Library/metadata/8a/8a6d6b4310ed779408864b271cefc04e
 spacejunk/Library/metadata/8a/8a6d6b4310ed779408864b271cefc04e
 spacejunk/Library/metadata/00/00000000000000002000000000000000
 spacejunk/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+=======
+>>>>>>> 64260a13bbf75e2405d6e2bfe7aea9bab6c76d51
