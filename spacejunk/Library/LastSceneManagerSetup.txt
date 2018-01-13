@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Scenes/Junk_Collect.unity
+  isLoaded: 1
+  isActive: 1
