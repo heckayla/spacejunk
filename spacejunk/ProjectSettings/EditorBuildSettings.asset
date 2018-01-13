@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 70daf4dbd3f75b440bb95b1fd589e0e4
+  - enabled: 1
+    path: Assets/Scenes/Junk_Collect.unity
+    guid: 7f024a4720e2c454bbf64910e2f234af
+  - enabled: 1
+    path: Assets/Scenes/Space_Adventure.unity
+    guid: 823695a1521a7a64490c3353b8da506d
