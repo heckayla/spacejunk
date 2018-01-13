@@ -157,6 +157,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1024990068654368, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
+      propertyPath: m_TagString
+      value: Garbage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
   m_IsPrefabParent: 0
@@ -346,6 +350,10 @@ Prefab:
       propertyPath: isP1
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1952733285425268, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
+      propertyPath: m_TagString
+      value: P2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
   m_IsPrefabParent: 0
@@ -392,9 +400,53 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 1952733285425268, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
+      propertyPath: m_TagString
+      value: P1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1326630709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1326630710}
+  - component: {fileID: 1326630711}
+  m_Layer: 0
+  m_Name: Trash_Scene_Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1326630710
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326630709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1326630711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326630709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2f8bc1d5bff0d46a6a0446511f2342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1363171693
 GameObject:
   m_ObjectHideFlags: 0
