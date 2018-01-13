@@ -51,7 +51,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 0
-    axis: 0
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical_P2
@@ -67,7 +67,7 @@ InputManager:
     snap: 1
     invert: 0
     type: 0
-    axis: 0
+    axis: 1
     joyNum: 2
   - serializedVersion: 3
     m_Name: Pickup_P1
@@ -87,12 +87,12 @@ InputManager:
     joyNum: 1
   - serializedVersion: 3
     m_Name: Pickup_P2
-    descriptiveName: Let player 1 pick up junk!
+    descriptiveName: Let player 2 pick up junk!
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: space
     altNegativeButton: 
-    altPositiveButton: mouse 0
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
