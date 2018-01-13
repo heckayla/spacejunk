@@ -43,6 +43,14 @@ public class Player_Controller : MonoBehaviour {
             //below sets movement based on input and public modifier
             horiz = rb.position.x + Input.GetAxis("Horizontal_P1")/movementModifier;
             vert = rb.position.y + Input.GetAxis("Vertical_P1")/movementModifier;
+            if (Input.GetAxis("Horizontal_P1") < 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0, 0, 90f);
+            else if (Input.GetAxis("Horizontal_P1") > 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0, 0, -90f);
+            else if (Input.GetAxis("Vertical_P1") < 0)
+                this.gameObject.transform.eulerAngles = new Vector3(180f , 0, 0);
+            else if (Input.GetAxis("Vertical_P1") > 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0 , 0, 0);
         }
         else { //for P2 control
             if (Input.GetAxis("Pickup_P2") > 0) //tries to grab trash
@@ -52,8 +60,17 @@ public class Player_Controller : MonoBehaviour {
             //below sets movement based on input and public modifier
             horiz = rb.position.x + Input.GetAxis("Horizontal_P2")/movementModifier;
             vert = rb.position.y + Input.GetAxis("Vertical_P2")/movementModifier;
+            if (Input.GetAxis("Horizontal_P2") < 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0, 0, 90f);
+            else if (Input.GetAxis("Horizontal_P2") > 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0, 0, -90f);
+            else if (Input.GetAxis("Vertical_P2") < 0)
+                this.gameObject.transform.eulerAngles = new Vector3(180f, 0, 0);
+            else if (Input.GetAxis("Vertical_P2") > 0)
+                this.gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
         }
         //move the racoon by the way it's pointed
         rb.MovePosition(new Vector2(horiz, vert));
-	}
+
+    }
 }

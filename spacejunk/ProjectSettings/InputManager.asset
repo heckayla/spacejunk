@@ -14,12 +14,12 @@ InputManager:
     altNegativeButton: a
     altPositiveButton: d
     gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
+    dead: 0.5
+    sensitivity: 3
+    snap: 1
     invert: 0
     type: 2
-    axis: 5
+    axis: 0
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal_P2
@@ -30,12 +30,12 @@ InputManager:
     altNegativeButton: left
     altPositiveButton: right
     gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
+    dead: 0.5
+    sensitivity: 3
+    snap: 1
     invert: 0
     type: 2
-    axis: 5
+    axis: 0
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical_P1
@@ -46,12 +46,12 @@ InputManager:
     altNegativeButton: s
     altPositiveButton: w
     gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
+    dead: 0.5
+    sensitivity: 3
+    snap: 1
+    invert: 1
     type: 2
-    axis: 6
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical_P2
@@ -62,12 +62,12 @@ InputManager:
     altNegativeButton: down
     altPositiveButton: up
     gravity: 0
-    dead: 0.19
-    sensitivity: 1
-    snap: 0
-    invert: 0
+    dead: 0.5
+    sensitivity: 3
+    snap: 1
+    invert: 1
     type: 0
-    axis: 6
+    axis: 1
     joyNum: 2
   - serializedVersion: 3
     m_Name: Pickup_P1
