@@ -21,7 +21,7 @@ public class Player_Controller : MonoBehaviour {
         }
         else { //sets horizontal and vertical components for P2 control
             horiz = Input.GetAxis("Horizontal_P2");
-            vert = Input.GetAxis("Horizontal_P2");
+            vert = Input.GetAxis("Vertical_P2");
         }
         //move the racoon by the way it's pointed
         this.transform.Translate(horiz, vert, 0);
