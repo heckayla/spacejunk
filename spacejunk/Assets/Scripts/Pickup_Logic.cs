@@ -16,8 +16,6 @@ public class Pickup_Logic : MonoBehaviour
         spr_rend = this.gameObject.GetComponent<SpriteRenderer>();
         spr_orig = spr_rend.sprite;
         spr_hl = Resources.Load<Sprite>("Garbage/" + gbName + "_hl");
-        Debug.Log(gbName);
-        Debug.Log(spr_hl);
     }
 
     // Update is called once per frame
