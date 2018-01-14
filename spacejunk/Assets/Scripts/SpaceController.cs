@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceController : MonoBehaviour {
 
@@ -33,6 +34,12 @@ public class SpaceController : MonoBehaviour {
     void FixedUpdate () {
         rb.MovePosition(new Vector2(rb.position.x + scrollRate, rb.position.y + steerShip));
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Space Junk")
+            SceneManager.LoadScene("Game Over");
+    }
 
     public void AddSprite(Sprite sprite) //This method will change the rocket body to any sprite passed into it
     {
