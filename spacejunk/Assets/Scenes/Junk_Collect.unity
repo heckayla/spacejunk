@@ -154,13 +154,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1024990068654368, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
       propertyPath: m_Name
+<<<<<<< HEAD
       value: Garbage_Ext
+=======
+      value: Garbage_Gb
+      objectReference: {fileID: 0}
+    - target: {fileID: 114008555172525852, guid: adb161ccc096b664eb71ad095b786dc5,
+        type: 2}
+      propertyPath: gbName
+      value: gameboy
+>>>>>>> michaelNew
       objectReference: {fileID: 0}
     - target: {fileID: 212288364347456898, guid: adb161ccc096b664eb71ad095b786dc5,
         type: 2}
       propertyPath: m_Sprite
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 21300000, guid: f2e0846f9dd7a134e824d14b5801cb97,
+=======
+      objectReference: {fileID: 21300000, guid: f79a76aae752bdd40a670c2049df2bc0,
+>>>>>>> michaelNew
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
@@ -177,8 +190,9 @@ GameObject:
   - component: {fileID: 270960664}
   - component: {fileID: 270960663}
   - component: {fileID: 270960662}
+  - component: {fileID: 270960667}
   m_Layer: 0
-  m_Name: Rocket_Stage
+  m_Name: Rocket_Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -297,6 +311,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270960667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270960661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea174bce0bf3466459295d468ef754c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &695450617
 Prefab:
   m_ObjectHideFlags: 0
@@ -314,7 +339,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4013998810082492, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4013998810082492, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
       propertyPath: m_LocalRotation.x
@@ -385,7 +410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4013998810082492, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4013998810082492, guid: 006f84f3a273a5941a82b262d1e49c64, type: 2}
       propertyPath: m_LocalRotation.x
@@ -663,7 +688,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.7607844, g: 0.7607844, b: 0.7607844, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
