@@ -16,6 +16,8 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if(rb.position.x < 39)
         rb.MovePosition(new Vector2(rb.position.x + scrollRate, 0f));
     }
+
 }

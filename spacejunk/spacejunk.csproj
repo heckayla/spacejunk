@@ -313,6 +313,7 @@
     <Compile Include="Assets\Scripts\Transition.cs" />
     <Compile Include="Assets\Scripts\Trash_Scene_Controller.cs" />
     <Compile Include="Assets\Scripts\TryAgain.cs" />
+    <Compile Include="Assets\Scripts\WinZone.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
