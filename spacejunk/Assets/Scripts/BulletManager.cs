@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletManager : MonoBehaviour {
-
-    public Sprite[] BulletArray;
+    
     public int BulletDelay;
     public GameObject bullet;
 

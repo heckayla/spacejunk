@@ -91,6 +91,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletSpeed: 0.35
   destroyTime: 50
+  BulletArray:
+  - {fileID: 21300000, guid: 2e6bfcff83daa2243b6dddffe9108138, type: 3}
+  - {fileID: 21300000, guid: 212bb801d60f75f40b1cb06291daabe5, type: 3}
 --- !u!212 &212011223890224520
 SpriteRenderer:
   m_ObjectHideFlags: 1
