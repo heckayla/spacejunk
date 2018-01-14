@@ -12,7 +12,9 @@ public class SpaceController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spriteRender = GetComponent<SpriteRenderer>();
+        //spriteRender.size.Set(2f, 1f);
         rb = GetComponent<Rigidbody2D>();
+        spriteRender.sprite = debugSprite;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +24,6 @@ public class SpaceController : MonoBehaviour {
 
     public void AddSprite(Sprite sprite)
     {
-        spriteRender.sprite = sprite;
+        spriteRender.sprite = debugSprite;
     }
 }
