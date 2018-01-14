@@ -301,6 +301,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Grid_Controller.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Pickup_Logic.cs" />
