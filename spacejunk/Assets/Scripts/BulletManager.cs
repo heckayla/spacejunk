@@ -8,7 +8,12 @@ public class BulletManager : MonoBehaviour {
     public GameObject bullet;
 
     private int delay;
-    // Use this for initialization
+    private AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update () {
 		if(Input.GetAxis("Fire_weapon") > 0 && delay == 0)
@@ -27,6 +32,7 @@ public class BulletManager : MonoBehaviour {
     private void CreateBullet()
     {
         Instantiate(bullet, new Vector3(transform.position.x,transform.position.y,transform.position.z), this.gameObject.transform.rotation);
+        audio.PlayOneShot(audio.clip);
         delay = BulletDelay;
     }
 }

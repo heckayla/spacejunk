@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 12460
+  controlID: 15964
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 12461
+  controlID: 15931
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,14 +171,14 @@ MonoBehaviour:
     height: 455
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 8}
+  m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 6}
   - {fileID: 7}
   - {fileID: 8}
   - {fileID: 9}
-  m_Selected: 2
-  m_LastSelected: 1
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,9 +212,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -40.62588, y: -1.8556825, z: 1.1989552}
+    m_Target: {x: 27.477781, y: -1.4508379, z: 1.0507812}
     speed: 2
-    m_Value: {x: -40.62588, y: -1.8556825, z: 1.1989552}
+    m_Value: {x: 27.477781, y: -1.4508379, z: 1.0507812}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -242,9 +242,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.984764
+    m_Target: 23.66274
     speed: 2
-    m_Value: 8.984764
+    m_Value: 23.66274
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 12438
+  controlID: 15965
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ee2a0000
-    m_LastClickedID: 10990
-    m_ExpandedIDs: 7ef8ffff00000000d42a0000
+    m_SelectedIDs: 16700000
+    m_LastClickedID: 28694
+    m_ExpandedIDs: 5eabf9ff7ef8ffff00000000d42a000000700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,18 +594,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites/Racoons
+    - Assets/Sounds
   m_ViewMode: 1
   m_StartGridSize: 81
   m_LastFolders:
-  - Assets/Sprites/Racoons
+  - Assets/Sounds
   m_LastFoldersGridSize: 81
   m_LastProjectPath: C:\Users\Master\Documents\Game Projects\spacejunk\spacejunk
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b4290000
-    m_LastClickedID: 10676
+    m_SelectedIDs: 5c700000
+    m_LastClickedID: 28764
     m_ExpandedIDs: 000000007629000084290000ba290000262a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -659,8 +659,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ee2a0000
-    m_LastClickedInstanceID: 10990
+    m_SelectedInstanceIDs: 16700000
+    m_LastClickedInstanceID: 28694
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 3c2b000000000000c22c00009437000098370000082a0000
     m_RenameOverlay:
@@ -686,7 +686,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 2106}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 81
   m_DirectoriesAreaWidth: 138
 --- !u!114 &15
