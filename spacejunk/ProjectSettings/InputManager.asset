@@ -115,7 +115,7 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 5
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Fire_weapon
