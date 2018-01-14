@@ -39,14 +39,38 @@ public class Trash_Scene_Controller : MonoBehaviour {
 
     public void grab(bool isP1, GameObject player) //allows a player to grab an item if they are capable of it
     {
-        if (isP1 && pickupP1) {
+        if (isP1 && pickupP1 && p1Holdable != p2Held) { //players cannot grab items off of other players
             p1Held = p1Holdable;
             p1Holdable.transform.SetParent(player.transform, true);
+            p1Holdable.transform.Translate(0, 0, -2); //puts the garbage on top of raccoon
         }
-        else if (!isP1 && pickupP2)
+        else if (!isP1 && pickupP2 && p2Holdable != p1Held)
         {
             p2Held = p2Holdable;
             p2Holdable.transform.SetParent(player.transform, true);
+            p2Holdable.transform.Translate(0, 0, -2); //puts the garbage on top of raccoon
         }
+    }
+
+    public void drop(bool isP1, GameObject player)
+    { //allows a player to drop an item they're holding
+        if (isP1)
+        {
+            p1Held.transform.SetParent(this.gameObject.transform.parent, true);
+            p1Held.transform.Translate(0, 0, 2);
+            p1Held = null;
+        }
+        else
+        {
+            p2Held.transform.SetParent(this.gameObject.transform.parent, true);
+            p2Held.transform.Translate(0, 0, 2);
+            p2Held = null;
+        }
+    }
+
+    public GameObject getHeldItem(bool isP1)
+    {
+        if (isP1) { return p1Held; }
+        else { return p2Held; }
     }
 }

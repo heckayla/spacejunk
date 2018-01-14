@@ -10,35 +10,45 @@ public class Player_Controller : MonoBehaviour {
     float horiz = 0; //racoon's horizontal movement
     float vert = 0; //racoon's vertical movement
     Rigidbody2D rb; //the player's Rigidbody
-    //bool canPickup; //player can pickup garabage
+    bool canInteractP1 = true; //true if the player can interact with garbage, false if they JUST did
+    bool canInteractP2 = true; //same as above for P2
+    public float P1InteractTimer = 0; //P1 can interact when it hits .75
+    public float P2InteractTimer = 0; //P2 can interact when it hits .75
     //GameObject heldItem; //the object player is holding
 
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); //can't be set before runtime
 	}
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Garbage") {
-    //        if (isP1 && Input.GetAxis("Pickup_P1") > 0)
-    //        {
-    //            heldItem = collision.gameObject;
-    //            Debug.Log("picked up garbage!");
-    //        }
-
-    //        else if (!isP1 && Input.GetAxis("Pickup_P2") > 0)
-    //        {
-    //            heldItem = collision.gameObject;
-    //        }
-    //    } //allows player to pickup garbage when on it
-    //}
-
     // Update is called once per frame
-    void Update () {
+    void Update () { //the two if statements below cover control timers for fluid interaction with objects
+        if (!canInteractP1)
+        {
+            P1InteractTimer += Time.deltaTime;
+            if (P1InteractTimer > .75)
+            {
+                P1InteractTimer = 0;
+                canInteractP1 = true;
+            }
+        }
+        if (!canInteractP2)
+        {
+            P2InteractTimer += Time.deltaTime;
+            if (P2InteractTimer > .75)
+            {
+                P2InteractTimer = 0;
+                canInteractP2 = true;
+            }
+        }
         if (isP1) { //for P1 control
-            if (Input.GetAxis("Pickup_P1") > 0) { //tries to grab trash
-                Trash_Scene_Controller.instance.grab(true, this.gameObject);
+            if (Input.GetAxis("Pickup_P1") > 0 && canInteractP1) { //tries to grab or drop trash
+                canInteractP1 = false;
+                if (Trash_Scene_Controller.instance.getHeldItem(true) == null)
+                { //if no item held, pick one up
+                    Trash_Scene_Controller.instance.grab(true, this.gameObject);
+                } //if a held item, drop it
+                else { Trash_Scene_Controller.instance.drop(true, this.gameObject); }
             }
             //below sets movement based on input and public modifier
             horiz = rb.position.x + Input.GetAxis("Horizontal_P1")/movementModifier;
@@ -53,9 +63,13 @@ public class Player_Controller : MonoBehaviour {
                 this.gameObject.transform.eulerAngles = new Vector3(0 , 0, 0);
         }
         else { //for P2 control
-            if (Input.GetAxis("Pickup_P2") > 0) //tries to grab trash
-            {
-                Trash_Scene_Controller.instance.grab(false, this.gameObject);
+            if (Input.GetAxis("Pickup_P2") > 0 && canInteractP2) { //tries to grab or drop trash
+                canInteractP2 = false;
+                if (Trash_Scene_Controller.instance.getHeldItem(false) == null)
+                { //if no item held, pick one up
+                    Trash_Scene_Controller.instance.grab(false, this.gameObject);
+                } //if a held item, drop it
+                else { Trash_Scene_Controller.instance.drop(false, this.gameObject); }
             }
             //below sets movement based on input and public modifier
             horiz = rb.position.x + Input.GetAxis("Horizontal_P2")/movementModifier;
