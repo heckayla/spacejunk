@@ -19,7 +19,11 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
+<<<<<<< HEAD
     axis: 0
+=======
+    axis: 5
+>>>>>>> michaelWork
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal_P2
@@ -35,7 +39,11 @@ InputManager:
     snap: 1
     invert: 0
     type: 2
+<<<<<<< HEAD
     axis: 0
+=======
+    axis: 5
+>>>>>>> michaelWork
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical_P1
@@ -46,12 +54,21 @@ InputManager:
     altNegativeButton: s
     altPositiveButton: w
     gravity: 0
+<<<<<<< HEAD
     dead: 0.75
     sensitivity: 3
     snap: 1
     invert: 1
     type: 2
     axis: 1
+=======
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 6
+>>>>>>> michaelWork
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical_P2
@@ -62,12 +79,21 @@ InputManager:
     altNegativeButton: down
     altPositiveButton: up
     gravity: 0
+<<<<<<< HEAD
     dead: 0.75
     sensitivity: 3
     snap: 1
     invert: 1
     type: 0
     axis: 1
+=======
+    dead: 0.19
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 6
+>>>>>>> michaelWork
     joyNum: 2
   - serializedVersion: 3
     m_Name: Pickup_P1
@@ -115,7 +141,7 @@ InputManager:
     snap: 0
     invert: 1
     type: 2
-    axis: 5
+    axis: 6
     joyNum: 1
   - serializedVersion: 3
     m_Name: Fire_weapon
