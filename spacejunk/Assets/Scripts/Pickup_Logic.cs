@@ -26,6 +26,7 @@ public class Pickup_Logic : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) //note: other is guaranteed to be a player
     {
+        //Debug.Log("garbage " + gbName + " collided with" + collision);
         if (collision.gameObject.tag == "P1")
         {
             Trash_Scene_Controller.instance.setPickupP1(true, this.gameObject);

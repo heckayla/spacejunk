@@ -8,10 +8,16 @@ public class Trash_Scene_Controller : MonoBehaviour {
 
     bool pickupP1 = false; //if p1 can pickup trash
     bool pickupP2 = false; //if p2 can pickup trash
+
     GameObject p1Holdable = null; //the item p1 is currently on top of
     GameObject p2Holdable = null; //the item p2 is currently on top of
     GameObject p1Held = null; //the item p1 holds
     GameObject p2Held = null; //the object p2 holds
+
+    GameObject trashableBoxP1 = null; //holds the box P1 can trash
+    GameObject trashableBoxP2 = null; //holds the box P2 can trash
+
+    int trashCollected = 0; //how much trash is placed into the rocket slots
 
     public void Awake()
     {
@@ -43,12 +49,14 @@ public class Trash_Scene_Controller : MonoBehaviour {
             p1Held = p1Holdable;
             p1Holdable.transform.SetParent(player.transform, true);
             p1Holdable.transform.Translate(0, 0, -2); //puts the garbage on top of raccoon
+            if (trashableBoxP1 != null) { addTrash(false); } //take away trashCount if grabbing from a gridbox
         }
         else if (!isP1 && pickupP2 && p2Holdable != p1Held)
         {
             p2Held = p2Holdable;
             p2Holdable.transform.SetParent(player.transform, true);
             p2Holdable.transform.Translate(0, 0, -2); //puts the garbage on top of raccoon
+            if (trashableBoxP2 != null) { addTrash(false); } //take away trashCount if grabbing from a gridbox
         }
     }
 
@@ -56,13 +64,30 @@ public class Trash_Scene_Controller : MonoBehaviour {
     { //allows a player to drop an item they're holding
         if (isP1)
         {
-            p1Held.transform.SetParent(this.gameObject.transform.parent, true);
+            if (trashableBoxP1 == null || trashableBoxP1.transform.childCount > 0)
+                //this means you're just dropping trash in the gameworld, nowhere specific
+            {
+                p1Held.transform.SetParent(this.gameObject.transform.parent, true);
+            }
+            else
+            { //this means you're dropping trash in the grid
+                    p1Held.transform.SetParent(trashableBoxP1.transform, true);
+                    addTrash(true);
+            }
             p1Held.transform.Translate(0, 0, 2);
             p1Held = null;
         }
         else
         {
-            p2Held.transform.SetParent(this.gameObject.transform.parent, true);
+            if (trashableBoxP2 == null || trashableBoxP2.transform.childCount > 0)
+            {
+                p2Held.transform.SetParent(this.gameObject.transform.parent, true);
+            }
+            else
+            {
+                p2Held.transform.SetParent(trashableBoxP2.transform, true);
+                addTrash(true);
+            }
             p2Held.transform.Translate(0, 0, 2);
             p2Held = null;
         }
@@ -72,5 +97,30 @@ public class Trash_Scene_Controller : MonoBehaviour {
     {
         if (isP1) { return p1Held; }
         else { return p2Held; }
+    }
+
+    public void addTrash(bool add) //used to add and subtract one trash, depending on bool
+    {
+        if (add) {
+            trashCollected += 1;
+            Debug.Log("Trash has been added. trashCollected is " + trashCollected);
+            if (trashCollected >= 15) { finishScene(); } //this scene is over because collection is done!
+        }
+        else {
+            trashCollected -= 1;
+            Debug.Log("Trash has been removed. trashCollected is " + trashCollected);
+        }
+        if (trashCollected < 0) { Debug.Log("The trashCollected value is " + trashCollected); }
+    }
+
+    public void gridBoxTrashable(GameObject gridbox, bool isP1) //tells the manager that a gridbox is able to be trashed
+    {
+        if (isP1) { trashableBoxP1 = gridbox; }
+        else { trashableBoxP2 = gridbox; }
+    }
+
+    public void finishScene()
+    {
+        Debug.Log("The scene is finished!");
     }
 }
