@@ -15,10 +15,15 @@ public class Player_Controller : MonoBehaviour {
     public float P1InteractTimer = 0; //P1 can interact when it hits .75
     public float P2InteractTimer = 0; //P2 can interact when it hits .75
     //GameObject heldItem; //the object player is holding
+    Vector2 lastPos = new Vector2(-1, -3);
+
+    Animator anim; //used for controlling movement animation
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>(); //can't be set before runtime
+        anim = GetComponent<Animator>();
+        if (!isP1) { lastPos = new Vector2(1, -3); }
 	}
 
     // Update is called once per frame
@@ -85,6 +90,17 @@ public class Player_Controller : MonoBehaviour {
         }
         //move the racoon by the way it's pointed
         rb.MovePosition(new Vector2(horiz, vert));
-
+        //Debug.Log("horiz is " + horiz + " and vert is " + vert);
+        if (new Vector2(horiz, vert) != lastPos) //Player not moving
+        {
+            anim.StopPlayback();
+            //Debug.Log("stopped playback on P1");
+        }
+        else
+        {
+            anim.StartPlayback();
+            //Debug.Log("started playback on P1");
+        }
+        lastPos = new Vector2(horiz, vert);
     }
 }
