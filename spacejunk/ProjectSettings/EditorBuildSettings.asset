@@ -12,5 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Junk_Collect.unity
     guid: 7f024a4720e2c454bbf64910e2f234af
   - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: bb349ff70a4ee9444b3b48c387b28a2b
+  - enabled: 1
     path: Assets/Scenes/Space_Adventure.unity
     guid: 823695a1521a7a64490c3353b8da506d
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 0049e1d9ef06fbe44ad357b76e1292c1
+  - enabled: 1
+    path: Assets/Scenes/Win Screen.unity
+    guid: df39585f6bdfa34448a11657a57ff290
