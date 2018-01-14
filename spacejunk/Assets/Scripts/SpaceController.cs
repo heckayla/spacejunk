@@ -8,22 +8,23 @@ public class SpaceController : MonoBehaviour {
     public float scrollRate;
     public Sprite debugSprite;
     public float movementMod;
+    public float upperLimit;
+    public float lowerLimit;
 
     SpriteRenderer spriteRender;
-    private Camera camera;
     private Rigidbody2D rb;
     private float steerShip;
 
 
 	void Start () {
         spriteRender = GetComponent<SpriteRenderer>();
-        //spriteRender.size.Set(2f, 1f);
         rb = GetComponent<Rigidbody2D>();
         spriteRender.sprite = debugSprite;
 	}
 
     private void Update()
     {
+        Debug.Log(Input.GetAxis("Steer_ship"));
         if(Input.GetAxis("Steer_ship") != 0)
         {
             steerShip = Input.GetAxis("Steer_ship") / movementMod;

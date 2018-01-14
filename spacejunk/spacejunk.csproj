@@ -300,14 +300,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\Grid_Box.cs" />
-=======
-    <Compile Include="Assets\Grid_Controller.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\BulletManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
->>>>>>> master
+    <Compile Include="Assets\Scripts\Grid_Box.cs" />
+    <Compile Include="Assets\Scripts\JunkController.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Pickup_Logic.cs" />
     <Compile Include="Assets\Scripts\Player_Controller.cs" />
