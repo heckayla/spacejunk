@@ -309,6 +309,7 @@
     <Compile Include="Assets\Scripts\Player_Controller.cs" />
     <Compile Include="Assets\Scripts\Replay.cs" />
     <Compile Include="Assets\Scripts\SpaceController.cs" />
+    <Compile Include="Assets\Scripts\SpaceJunk.cs" />
     <Compile Include="Assets\Scripts\Transition.cs" />
     <Compile Include="Assets\Scripts\Trash_Scene_Controller.cs" />
     <Compile Include="Assets\Scripts\TryAgain.cs" />
