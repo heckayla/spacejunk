@@ -27,7 +27,7 @@ public class Trash_Scene_Controller : MonoBehaviour {
         }
         instance = this;
     }
-
+    //some comment
     // Update is called once per frame
     void Update () {
 	}
