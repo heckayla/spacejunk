@@ -26,4 +26,9 @@ public class Bullet : MonoBehaviour {
         if (destroyTime == 0) Destroy(this.gameObject);
         else destroyTime--;
     }
+
+    public void DestroyBullet()
+    {
+
+    }
 }
