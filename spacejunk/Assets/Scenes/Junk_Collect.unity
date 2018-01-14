@@ -152,15 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 58975052293260262, guid: adb161ccc096b664eb71ad095b786dc5,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1024990068654368, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
-      propertyPath: m_TagString
-      value: Garbage
+      propertyPath: m_Name
+      value: Garbage_Ext
       objectReference: {fileID: 0}
+    - target: {fileID: 212288364347456898, guid: adb161ccc096b664eb71ad095b786dc5,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2e0846f9dd7a134e824d14b5801cb97,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adb161ccc096b664eb71ad095b786dc5, type: 2}
   m_IsPrefabParent: 0
@@ -702,22 +703,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2047762520 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1024990068654368, guid: adb161ccc096b664eb71ad095b786dc5,
-    type: 2}
-  m_PrefabInternal: {fileID: 146195815}
---- !u!114 &2047762521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047762520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7f4109ef2e6e2a43ae26915f9f4d767, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2057123006 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1952733285425268, guid: 006f84f3a273a5941a82b262d1e49c64,
