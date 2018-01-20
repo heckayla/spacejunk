@@ -21,11 +21,7 @@ GameObject:
   - component: {fileID: 4020435651910046}
   - component: {fileID: 212288364347456898}
   - component: {fileID: 58975052293260262}
-<<<<<<< HEAD
-  - component: {fileID: 114008925422086672}
-=======
   - component: {fileID: 114008555172525852}
->>>>>>> michaelNew
   m_Layer: 0
   m_Name: Garbage
   m_TagString: Garbage
@@ -61,11 +57,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
-<<<<<<< HEAD
---- !u!114 &114008925422086672
-=======
 --- !u!114 &114008555172525852
->>>>>>> michaelNew
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,10 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f4109ef2e6e2a43ae26915f9f4d767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
   gbName: fire_ext
->>>>>>> michaelNew
 --- !u!212 &212288364347456898
 SpriteRenderer:
   m_ObjectHideFlags: 1
